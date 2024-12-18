@@ -42,32 +42,22 @@ graph_edges = [
 ]
 
 
-graphForBfs = {
-    'A': ['B', 'C', 'D', 'E'],
-    'B': ['A', 'C'],
-    'C': ['A', 'B', 'D'],
-    'D': ['A', 'C'],
-    'E': ['A']
+graph_For_BFS_DFS = {
+    'A': ['B', 'C', 'D'],
+    'B': ['E', 'F'],
+    'C': ['G'],
+    'D': ['H', 'I'],
+    'E': [],
+    'F': ['J'],
+    'G': ['K', 'L'],
+    'H': [],
+    'I': ['M'],
+    'J': [],
+    'K': [],
+    'L': [],
+    'M': []
 }
 
-
-def bfs(graph, start):
-    visited = set()                 # 1
-    queue = deque([start])
-    visited.add(start)
-    while queue:                    # 2
-        x = queue.popleft()         # 2.1
-        print("x: " + str(x))
-
-        for i in graph[x]:          # 2.2, 2.3
-            if i not in visited:
-                visited.add(i)
-                queue.append(i)
-                # print(i, "added")
-        # print("visited: " + str(visited))
-
-
-bfs(graphForBfs, 'A')
 
 def dijkstra(g, n, start):
     dist = [float('inf') for _ in range(1, n + 1)]

@@ -14,6 +14,7 @@ def primal1(x):
     return True
 
 
+# the best efficiency
 def primal2(x):
     if x < 2:
         return False
@@ -26,8 +27,14 @@ def primal2(x):
             return False
     return True
 
-n = 58259837
-print(not re.match(r'^.?$|^(..+?)\1+$', '1' * n))        # silly metoda na pierwsza liczbe z yt
 
+# silly metoda na pierwsza liczbe z yt halloween od taty
+def primal3(x):
+    return not re.match(r'^.?$|^(..+?)\1+$', '1' * x)
+
+
+n = 58259837
+print(primal1(n))
 print(primal2(n))
+print(primal3(n))
 

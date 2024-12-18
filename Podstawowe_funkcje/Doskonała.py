@@ -21,6 +21,7 @@ def perfect2(x):
     return False
 
 
+# the best efficiency
 def perfect3(x):
     t = 1
     for i in range(2, math.isqrt(x) + 1):
