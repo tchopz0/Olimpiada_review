@@ -12,7 +12,7 @@ def dijkstra(graph, start):
     dist = [float('inf') for _ in range(1, len(graph) + 1)]
     dist[start - 1] = 0
     queue = [i for i in range(1, len(graph) + 1)]
-    print(dist, queue)
+
     while queue:
 
         min1 = float('inf')
