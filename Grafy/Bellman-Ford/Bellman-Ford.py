@@ -18,7 +18,7 @@ def bellmanFord(g, start):
                 if dist[neighbour - 1] + weight < dist[v - 1]:
                     dist[v - 1] = dist[neighbour - 1] + weight
 
-    # brakuje sprawdzenia nieskonczonych wezlow jeszce
+    # brakuje sprawdzenia nieskonczonych wezlow jeszce (zakładam że jest to graf acykliczny)
     return dist
 
 print(bellmanFord(graph_for_Bellman_Ford, 1))
